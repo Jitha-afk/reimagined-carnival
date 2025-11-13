@@ -1,38 +1,119 @@
 # Personal Blog
 
-A static personal blog website designed to be hosted on GitHub Pages.
+A modern personal blog website built with Next.js, shadcn/ui components, and Tailwind CSS.
 
 ## Features
 
 - **Blog Posts**: Share top of mind articles and thoughts on various topics
 - **Books Library**: Track currently reading books with progress bars and completed books
 - **Responsive Design**: Works seamlessly on mobile and desktop devices
-- **Clean UI**: Modern, gradient-based design with smooth transitions
+- **Modern UI**: Built with shadcn/ui components and Tailwind CSS
+- **Next.js 16**: Server-side rendering and optimized performance
+- **TypeScript**: Type-safe development
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Styling**: Tailwind CSS v4
+- **UI Components**: shadcn/ui
+- **Language**: TypeScript
+- **Icons**: Radix UI
 
 ## Pages
 
-- `index.html` - Blog homepage with article posts
-- `books.html` - Reading library with current and completed books
+- `/` - Blog homepage with article posts
+- `/books` - Reading library with current and completed books
 
-## Local Development
+## Getting Started
 
-To view the website locally:
+### Prerequisites
+
+- Node.js 18+ installed on your machine
+- npm or yarn package manager
+
+### Installation
 
 1. Clone this repository
-2. Open `index.html` in your browser, or
-3. Run a local server:
    ```bash
-   python3 -m http.server 8000
+   git clone <repository-url>
+   cd reimagined-carnival
    ```
-   Then visit `http://localhost:8000`
 
-## GitHub Pages
+2. Install dependencies
+   ```bash
+   npm install
+   ```
 
-This site is configured to be hosted on GitHub Pages. Once enabled in your repository settings, it will be available at:
-`https://[username].github.io/[repository-name]/`
+3. Run the development server
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## Project Structure
+
+```
+.
+├── app/
+│   ├── books/
+│   │   └── page.tsx          # Books library page
+│   ├── layout.tsx            # Root layout with navigation
+│   ├── page.tsx              # Blog homepage
+│   └── globals.css           # Global styles with Tailwind
+├── components/
+│   ├── ui/                   # shadcn/ui components
+│   │   ├── card.tsx
+│   │   ├── badge.tsx
+│   │   └── progress.tsx
+│   └── navigation.tsx        # Navigation component
+├── lib/
+│   ├── blog-data.ts          # Blog posts data
+│   ├── books-data.ts         # Books data
+│   └── utils.ts              # Utility functions
+└── public/                   # Static assets
+```
 
 ## Customization
 
-- Edit the HTML files to add your own blog posts and book entries
-- Modify `styles.css` to customize colors, fonts, and layout
-- Update `_config.yml` with your site information
+- **Blog Posts**: Edit `lib/blog-data.ts` to add or modify blog posts
+- **Books**: Edit `lib/books-data.ts` to update your reading list
+- **Styling**: Modify `app/globals.css` to customize colors and themes
+- **Components**: Customize shadcn/ui components in `components/ui/`
+
+## Deployment
+
+### Vercel (Recommended)
+
+The easiest way to deploy is using [Vercel](https://vercel.com):
+
+1. Push your code to GitHub
+2. Import your repository in Vercel
+3. Vercel will automatically detect Next.js and deploy
+
+### Other Platforms
+
+You can also deploy to:
+- Netlify
+- AWS Amplify
+- Railway
+- Any platform that supports Node.js
+
+## Learn More
+
+To learn more about the technologies used:
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [shadcn/ui Documentation](https://ui.shadcn.com)
+
+## License
+
+See [LICENSE](LICENSE) file for details.
